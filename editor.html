@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <title>Multipule QullEditor</title>
+</head>
+
+<body>
+    <div class="container">
+        <button id="hello">Hello</button>
+        <button id="hello1">Hello1</button>
+        <button id="hello2">Hello2</button>
+    </div>
+    <script>
+        problems = [
+            "changed data show after saving..",
+            "No -repeat attempts",
+            "No record of lastt datat changed",
+            "Parlell call multipule events"
+        ]
+
+        var jobQueue = []; //{target:el, contnet;'', status:'inProgress/saved/fail'}
+
+        async function updateChangeOnDOM(target, content) {
+
+        }
+
+        async function saveContentOnDB(request) {
+
+        }
+
+        function onSave() {
+            var targetEl = $(this);
+            var getContent = targetEl.html().trim();
+            var attempts = 1;
+            jobQueue.push({
+                'target': '',
+                'content': '',
+                'status': 'inProgress'
+            });
+            updateChangeOnDOM(targetEl, getContent, job_id)
+            var rquest = prepareRequest();
+            saveContentOnDB().then(function(result) {
+                    if (result) {
+                        // change status to done
+                        // remove status from DOM
+                    }
+                })
+                .catch(function() {
+                    attempts++;
+                })
+
+        }
+    </script>
+</body>
+
+</html>

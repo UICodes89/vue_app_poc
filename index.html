@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title> View CV - Vue Version </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/fc8f9f5665.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="container main-wrapper pb-5">
+        <div class="w-100">
+            <div id="viewCV">
+                <introduction-component></introduction-component>
+                <summary-component></summary-component>
+                <skill-component></skill-component>
+                <education-component></education-component>
+                <work-exp-component> </work-exp-component>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script><!--Vue.js An UI-->
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script><!--Axios for HTTP Calls-->
+<script src="https://unpkg.com/vuex@3.5.1/dist/vuex.js"></script><!-- Vuex for state Management-->
+<script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.js"></script>
+<!--Store, Reducers, Actions-->
+<script src="./js/store/vuex-store-mutation-actions.js"></script>
+
+<!--Work Experience-->
+<script src="./js/components/work-exp-components/work-exp-component.js"></script>
+<script src="./js/components/work-exp-components/edit-work-exp-component.js"></script>
+<script src="./js/components/work-exp-components/work-exp-content-component.js"></script>
+<!--Education-->
+<script src="./js/components/education-components/education-component.js"></script>
+<script src="./js/components/education-components/education-content-component.js"></script>
+<script src="./js/components/education-components/edit-education-component.js"></script>
+<!--Skill-->
+<script src="./js/components/skill-components/skill-component.js"></script>
+<script src="./js/components/skill-components/skill-content-component.js"></script>
+<script src="./js/components/skill-components/edit-skill-component.js"></script>
+<!--Summary-->
+<script src="./js/components/summary-component/summary-component.js"></script>
+<script src="./js/components/summary-component/edit-summary-component.js"></script>
+<!--Introduction-->
+<script src="./js/components/introduction-components/introduction-components.js"></script>
+<script src="./js/components/introduction-components/edit-introduction-components.js"></script>
+
+<!--Entry Point File-->
+<script src="./js/view-cv.js"></script>
+
+</html>
